@@ -1,0 +1,135 @@
+/*inicio do reset do site*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*fim do reset do site*/
+body{
+    background-image:url('https://media.giphy.com/media/10h1BGkwYiIydi/giphy.gif');
+    font-family:'Arial Narrow';
+    background-size: 100vw 100vh;
+    font-size: 12px;
+    font-family: 'Pangolin', cursive;
+}
+/*Se a tela tiver menos de 400px ela vai ficar de outra forma*/
+@media (min-width: 350px){
+    body{
+        font-size: 17px;
+    }
+}
+
+header{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu{
+    background-color: white;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+}
+
+.menu ul{
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu li{
+    list-style: none;
+}
+
+.menu a{
+    display: block;
+    padding: 10px 20px;
+
+}
+
+a{
+    text-decoration:none;
+}
+
+a:hover{
+    text-decoration:underline;
+}
+
+.site-title, 
+.site-subtitle{
+    text-align: center;
+    color: whitesmoke;
+    font-family: 'Nova Mono', monospace;
+    line-height: 1.8em;
+}
+
+.site-subtitle{
+    font-style: italic;
+}
+
+.img-portfolio{
+    height: 210px;
+    width: 250px;
+    box-shadow: 0 0 15px 10px rgb(121, 79, 0);
+    margin: 15px;
+    object-fit: cover;
+    border-radius:5%;
+}
+
+.portfolio{
+    padding: 1.05em;
+    height: 100vh;
+}
+
+.portfolio h2{
+    color: whitesmoke;
+    margin-bottom: 1.05em;
+    padding: 4px;
+    display: flex;
+    justify-content: center;
+}
+
+.leganda-portfolio{
+    color:whitesmoke;
+    background-color: black;
+    margin: 0 40px;
+}
+
+.portfolio .grid{
+    display:grid;
+    grid-template-columns:300px;
+    justify-content: center;
+}
+
+.portfolio figure{
+    text-align: center;
+}
+
+@media (min-width: 600px) {
+    .portfolio .grid{
+        display:grid;
+        grid-template-columns:repeat(2,300px);
+        justify-content: center;
+    }
+}
+
+@media (min-width: 900px) {
+    .portfolio .grid{
+        display:grid;
+        grid-template-columns: repeat(3, 300px);
+        justify-content: center;
+    }
+    .img-portfolio{
+        height: 210px;
+        width: 250px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .portfolio .grid{
+        display:grid;
+        grid-template-columns: repeat(4, 300px);
+        justify-content: center;
+    }
+}
